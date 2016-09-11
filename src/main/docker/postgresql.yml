@@ -1,0 +1,12 @@
+version: '2'
+services:
+    planning-postgresql:
+        container_name: planning-postgresql
+        image: postgres:9.5.3
+        # volumes:
+        #     - ~/volumes/jhipster/planning/postgresql/:/var/lib/postgresql/
+        environment:
+            - POSTGRES_USER=postgres
+            - POSTGRES_PASSWORD=postgres
+        ports:
+            - 5432:5432
