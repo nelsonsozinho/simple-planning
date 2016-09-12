@@ -1,0 +1,24 @@
+{
+    "planningApp": {
+        "budget" : {
+            "home": {
+                "title": "Budgets",
+                "createLabel": "Criar novo Budget",
+                "createOrEditLabel": "Criar ou editar Budget",
+                "search": "Pesquisar por Budget"
+            },
+            "created": "Um novo Budget é criado com o identificador {{ param }}",
+            "updated": "Um Budget é atualizado com o identificador {{ param }}",
+            "deleted": "Um Budget é deletado com o identificador {{ param }}",
+            "delete": {
+                "question": "Tem certeza de que deseja excluir Budget {{ id }}?"
+            },
+            "detail": {
+                "title": "Budget"
+            },
+            "year": "Year",
+            "version": "Version",
+            "costCenters": "Cost Centers"
+        }
+    }
+}

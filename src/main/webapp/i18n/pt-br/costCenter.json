@@ -1,0 +1,25 @@
+{
+    "planningApp": {
+        "costCenter" : {
+            "home": {
+                "title": "Cost Centers",
+                "createLabel": "Criar novo Cost Center",
+                "createOrEditLabel": "Criar ou editar Cost Center",
+                "search": "Pesquisar por Cost Center"
+            },
+            "created": "Um novo Cost Center é criado com o identificador {{ param }}",
+            "updated": "Um Cost Center é atualizado com o identificador {{ param }}",
+            "deleted": "Um Cost Center é deletado com o identificador {{ param }}",
+            "delete": {
+                "question": "Tem certeza de que deseja excluir Cost Center {{ id }}?"
+            },
+            "detail": {
+                "title": "Cost Center"
+            },
+            "name": "Name",
+            "description": "Description",
+            "isGenerateRevenue": "Is Generate Revenue",
+            "budget": "Budget"
+        }
+    }
+}

@@ -19,8 +19,8 @@ spring:
         type: com.zaxxer.hikari.HikariDataSource
         url: jdbc:h2:mem:planning;DB_CLOSE_DELAY=-1
         name:
-        username:
-        password:
+        username: postgres
+        password: postgres
     jpa:
         database-platform: com.planning.budget.domain.util.FixedH2Dialect
         database: H2

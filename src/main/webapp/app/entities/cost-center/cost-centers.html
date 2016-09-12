@@ -1,0 +1,64 @@
+<div>
+    <h2 translate="planningApp.costCenter.home.title">Cost Centers</h2>
+    <jhi-alert></jhi-alert>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xs-4 no-padding-left">
+                <button class="btn btn-primary" ui-sref="cost-center.new" >
+                    <span class="glyphicon glyphicon-plus"></span>
+                    <span  translate="planningApp.costCenter.home.createLabel">
+                        Create new Cost Center
+                    </span>
+                </button>
+            </div>
+        </div>
+    </div>
+    <br/>
+    <div class="table-responsive">
+        <table class="jh-table table table-striped">
+            <thead>
+                <tr>
+                    <th><span translate="global.field.id">ID</span></th>
+                    <th><span translate="planningApp.costCenter.name">Name</span></th>
+                    <th><span translate="planningApp.costCenter.description">Description</span></th>
+                    <th><span translate="planningApp.costCenter.isGenerateRevenue">Is Generate Revenue</span></th>
+                    <th><span translate="planningApp.costCenter.budget">Budget</span></th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="costCenter in vm.costCenters track by costCenter.id">
+                    <td><a ui-sref="cost-center-detail({id:costCenter.id})">{{costCenter.id}}</a></td>
+                    <td>{{costCenter.name}}</td>
+                    <td>{{costCenter.description}}</td>
+                    <td>{{costCenter.isGenerateRevenue}}</td>
+                    <td>
+                        <a ui-sref="budget-detail({id:costCenter.budget.id})">{{costCenter.budget.id}}</a>
+                    </td>
+                    <td class="text-right">
+                        <div class="btn-group flex-btn-group-container">
+                            <button type="submit"
+                                    ui-sref="cost-center-detail({id:costCenter.id})"
+                                    class="btn btn-info btn-sm">
+                                <span class="glyphicon glyphicon-eye-open"></span>
+                                <span class="hidden-xs hidden-sm" translate="entity.action.view"></span>
+                            </button>
+                            <button type="submit"
+                                    ui-sref="cost-center.edit({id:costCenter.id})"
+                                    class="btn btn-primary btn-sm">
+                                <span class="glyphicon glyphicon-pencil"></span>
+                                <span class="hidden-xs hidden-sm" translate="entity.action.edit"></span>
+                            </button>
+                            <button type="submit"
+                                    ui-sref="cost-center.delete({id:costCenter.id})"
+                                    class="btn btn-danger btn-sm">
+                                <span class="glyphicon glyphicon-remove-circle"></span>
+                                <span class="hidden-xs hidden-sm" translate="entity.action.delete"></span>
+                            </button>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

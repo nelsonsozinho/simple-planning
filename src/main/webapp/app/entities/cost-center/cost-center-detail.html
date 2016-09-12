@@ -1,0 +1,35 @@
+
+<div>
+    <h2><span translate="planningApp.costCenter.detail.title">Cost Center</span> {{vm.costCenter.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="dl-horizontal jh-entity-details">
+        <dt><span translate="planningApp.costCenter.name">Name</span></dt>
+        <dd>
+            <span>{{vm.costCenter.name}}</span>
+        </dd>
+        <dt><span translate="planningApp.costCenter.description">Description</span></dt>
+        <dd>
+            <span>{{vm.costCenter.description}}</span>
+        </dd>
+        <dt><span translate="planningApp.costCenter.isGenerateRevenue">Is Generate Revenue</span></dt>
+        <dd>
+            <span>{{vm.costCenter.isGenerateRevenue}}</span>
+        </dd>
+        <dt><span translate="planningApp.costCenter.budget">Budget</span></dt>
+        <dd>
+            <a ui-sref="budget-detail({id:vm.costCenter.budget.id})">{{vm.costCenter.budget.id}}</a>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            ui-sref="{{ vm.previousState }}"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span translate="entity.action.back"> Back</span>
+    </button>
+
+    <button type="button" ui-sref="cost-center-detail.edit({id:vm.costCenter.id})" class="btn btn-primary">
+        <span class="glyphicon glyphicon-pencil"></span>
+        <span class="hidden-xs hidden-sm" translate="entity.action.edit"> Edit</span>
+    </button>
+</div>

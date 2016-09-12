@@ -33,13 +33,6 @@ apply plugin: 'io.spring.dependency-management'
 ext['hibernate.version'] = '${hibernate_entitymanager_version}'
 defaultTasks 'bootRun'
 
-idea {
-    module {
-        inheritOutputDirs = false
-        outputDir = file("$buildDir/classes/main/")
-    }
-}
-
 bootRepackage {
    mainClass = 'com.planning.budget.PlanningApp'
 }
@@ -111,9 +104,6 @@ repositories {
 }
 
 dependencies {
-    classpath "org.springframework.boot:spring-boot-gradle-plugin:1.4.0.RELEASE"
-    classpath 'org.springframework:springloaded:1.2.0.RELEASE'
-
     compile "io.dropwizard.metrics:metrics-core"
     compile "io.dropwizard.metrics:metrics-annotation:${dropwizard_metrics_version}"
     compile "io.dropwizard.metrics:metrics-ehcache:${dropwizard_metrics_version}"

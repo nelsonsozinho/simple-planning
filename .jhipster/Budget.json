@@ -1,0 +1,32 @@
+{
+    "fluentMethods": true,
+    "relationships": [
+        {
+            "relationshipName": "costCenters",
+            "otherEntityName": "costCenter",
+            "relationshipType": "one-to-many",
+            "otherEntityRelationshipName": "budget"
+        }
+    ],
+    "fields": [
+        {
+            "fieldName": "year",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "version",
+            "fieldType": "Integer",
+            "fieldValidateRules": [
+                "required"
+            ]
+        }
+    ],
+    "changelogDate": "20160912131508",
+    "dto": "no",
+    "service": "no",
+    "entityTableName": "budget",
+    "pagination": "no"
+}
