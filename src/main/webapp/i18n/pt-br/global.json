@@ -20,6 +20,10 @@
                 "logout": "Sair",
                 "register": "Registrar"
             },
+            "tables": {
+                "uitable": "Tabelas",
+                "handson": "Handson"
+            },
             "admin": {
                 "main": "Administração",
                 "userManagement": "Gerenciamento de usuário",

@@ -20,6 +20,10 @@
                 "logout": "Sign out",
                 "register": "Register"
             },
+            "tables": {
+                "uitable": "Tables",
+                "handson": "Handson"
+            },
             "admin": {
                 "main": "Administration",
                 "userManagement": "User management",

@@ -1,16 +1,16 @@
 (function() {
     'use strict';
-
     angular
         .module('planningApp', [
-            'ngStorage', 
+            'ngStorage',
             'tmh.dynamicLocale',
-            'pascalprecht.translate', 
+            'pascalprecht.translate',
             'ngResource',
             'ngCookies',
             'ngAria',
             'ngCacheBuster',
             'ngFileUpload',
+            'ngHandsontable',
             'ui.bootstrap',
             'ui.bootstrap.datetimepicker',
             'ui.router',
