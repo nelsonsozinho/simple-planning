@@ -1,0 +1,26 @@
+{
+    "planningApp": {
+        "managerAccount" : {
+            "home": {
+                "title": "Manager Accounts",
+                "createLabel": "Criar novo Manager Account",
+                "createOrEditLabel": "Criar ou editar Manager Account",
+                "search": "Pesquisar por Manager Account"
+            },
+            "created": "Um novo Manager Account é criado com o identificador {{ param }}",
+            "updated": "Um Manager Account é atualizado com o identificador {{ param }}",
+            "deleted": "Um Manager Account é deletado com o identificador {{ param }}",
+            "delete": {
+                "question": "Tem certeza de que deseja excluir Manager Account {{ id }}?"
+            },
+            "detail": {
+                "title": "Manager Account"
+            },
+            "value": "Value",
+            "description": "Description",
+            "maturity": "Maturity",
+            "isPaid": "Is Paid",
+            "name": "Name"
+        }
+    }
+}

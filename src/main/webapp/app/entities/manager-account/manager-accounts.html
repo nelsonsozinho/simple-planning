@@ -1,0 +1,87 @@
+<div>
+    <h2 translate="planningApp.managerAccount.home.title">Manager Accounts</h2>
+    <jhi-alert></jhi-alert>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xs-4 no-padding-left">
+                <button class="btn btn-primary" ui-sref="manager-account.new" >
+                    <span class="glyphicon glyphicon-plus"></span>
+                    <span  translate="planningApp.managerAccount.home.createLabel">
+                        Create new Manager Account
+                    </span>
+                </button>
+            </div>
+        </div>
+    </div>
+    <br/>
+    <div class="table-responsive">
+        <table class="jh-table table table-striped">
+            <thead>
+                <tr jh-sort="vm.predicate" ascending="vm.reverse" callback="vm.transition()">
+                    <th jh-sort-by="id"><span translate="global.field.id">ID</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="value"><span translate="planningApp.managerAccount.value">Value</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="description"><span translate="planningApp.managerAccount.description">Description</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="maturity"><span translate="planningApp.managerAccount.maturity">Maturity</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="isPaid"><span translate="planningApp.managerAccount.isPaid">Is Paid</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="name"><span translate="planningApp.managerAccount.name">Name</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="managerAccount in vm.managerAccounts track by managerAccount.id">
+                    <td><a ui-sref="manager-account-detail({id:managerAccount.id})">{{managerAccount.id}}</a></td>
+                    <td>{{managerAccount.value}}</td>
+                    <td>{{managerAccount.description}}</td>
+                        <td>{{managerAccount.maturity | date:'mediumDate'}}</td>
+                    <td>{{managerAccount.isPaid}}</td>
+                    <td>{{managerAccount.name}}</td>
+                    <td class="text-right">
+                        <div class="btn-group flex-btn-group-container">
+                            <button type="submit"
+                                    ui-sref="manager-account-detail({id:managerAccount.id})"
+                                    class="btn btn-info btn-sm">
+                                <span class="glyphicon glyphicon-eye-open"></span>
+                                <span class="hidden-xs hidden-sm" translate="entity.action.view"></span>
+                            </button>
+                            <button type="submit"
+                                    ui-sref="manager-account.edit({id:managerAccount.id})"
+                                    class="btn btn-primary btn-sm">
+                                <span class="glyphicon glyphicon-pencil"></span>
+                                <span class="hidden-xs hidden-sm" translate="entity.action.edit"></span>
+                            </button>
+                            <button type="submit"
+                                    ui-sref="manager-account.delete({id:managerAccount.id})"
+                                    class="btn btn-danger btn-sm">
+                                <span class="glyphicon glyphicon-remove-circle"></span>
+                                <span class="hidden-xs hidden-sm" translate="entity.action.delete"></span>
+                            </button>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="text-center">
+        <jhi-item-count page="vm.page" total="vm.queryCount" items-per-page="vm.itemsPerPage"></jhi-item-count>
+    </div>
+
+    <uib-pager total-items="vm.totalItems" ng-model="vm.page" ng-change="vm.transition()"></uib-pager>
+
+    <div>
+        <hot-table settings="{colHeaders: colHeaders, contextMenu: ['row_above', 'row_below', 'remove_row'], afterChange: afterChange}"
+                   row-headers="false"
+                   min-spare-rows="minSpareRows"
+                   datarows="vm.managerAccounts"
+                   height="600"
+                   width="900">
+            <hot-column data="id" title="'ID'" read-only></hot-column>
+            <hot-column data="name" title="'Name'" type="grayedOut" read-only></hot-column>
+            <hot-column data="description" title="'Description'" type="grayedOut" read-only></hot-column>
+            <hot-column data="maturity" title="'Maturity'" width="150" read-only></hot-column>
+            <hot-column data="isPaid" title="'Paid'" type="'checkbox'" width="80"  ></hot-column>
+            <hot-column data="value" title="'Value'" type="'numeric'" width="90" format="'$ 0,0.00'"></hot-column>
+        </hot-table>
+    </div>
+
+</div>

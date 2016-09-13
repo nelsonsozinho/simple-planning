@@ -1,0 +1,21 @@
+{
+    "planningApp": {
+        "delete" : {
+            "home": {
+                "title": "Deletes",
+                "createLabel": "Create a new Delete",
+                "createOrEditLabel": "Create or edit a Delete",
+                "search": "Search for Delete"
+            },
+            "created": "A new Delete is created with identifier {{ param }}",
+            "updated": "A Delete is updated with identifier {{ param }}",
+            "deleted": "A Delete is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete Delete {{ id }}?"
+            },
+            "detail": {
+                "title": "Delete"
+            }
+        }
+    }
+}

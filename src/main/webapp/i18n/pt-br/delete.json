@@ -1,0 +1,21 @@
+{
+    "planningApp": {
+        "delete" : {
+            "home": {
+                "title": "Deletes",
+                "createLabel": "Criar novo Delete",
+                "createOrEditLabel": "Criar ou editar Delete",
+                "search": "Pesquisar por Delete"
+            },
+            "created": "Um novo Delete é criado com o identificador {{ param }}",
+            "updated": "Um Delete é atualizado com o identificador {{ param }}",
+            "deleted": "Um Delete é deletado com o identificador {{ param }}",
+            "delete": {
+                "question": "Tem certeza de que deseja excluir Delete {{ id }}?"
+            },
+            "detail": {
+                "title": "Delete"
+            }
+        }
+    }
+}

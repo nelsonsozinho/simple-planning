@@ -9,6 +9,9 @@
                 "main": "Entidades",
                 "budget": "Budget",
                 "costCenter": "Cost Center",
+                "managerAccount": "Manager Account",
+                "managerAcco": "Manager Acco",
+                "delete": "Delete",
                 "jhipster-needle-menu-add-entry": "JHipster will add additional entities here (do not translate!)"
             },
             "account": {

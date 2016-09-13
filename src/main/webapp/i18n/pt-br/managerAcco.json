@@ -1,0 +1,21 @@
+{
+    "planningApp": {
+        "managerAcco" : {
+            "home": {
+                "title": "Manager Accos",
+                "createLabel": "Criar novo Manager Acco",
+                "createOrEditLabel": "Criar ou editar Manager Acco",
+                "search": "Pesquisar por Manager Acco"
+            },
+            "created": "Um novo Manager Acco é criado com o identificador {{ param }}",
+            "updated": "Um Manager Acco é atualizado com o identificador {{ param }}",
+            "deleted": "Um Manager Acco é deletado com o identificador {{ param }}",
+            "delete": {
+                "question": "Tem certeza de que deseja excluir Manager Acco {{ id }}?"
+            },
+            "detail": {
+                "title": "Manager Acco"
+            }
+        }
+    }
+}
